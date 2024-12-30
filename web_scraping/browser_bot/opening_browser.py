@@ -17,3 +17,5 @@ class BrowserBot:
         if self.driver is None:
             raise Exception("Driver is not initialized. Call open_chrome first.")
         return self.driver
+
+
