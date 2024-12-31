@@ -13,7 +13,7 @@ class ToUnblock:
     
     def unblock_instagram(self, username_to_unblock):
         driver = self.browser.get_driver()
-        wait = WebDriverWait(driver, 30)
+        wait = WebDriverWait(driver, 60)
     
         try:
             logging.info("Searching for Unblock button...(first button)")
