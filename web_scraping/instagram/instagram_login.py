@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from information.logging_config import setup_logging
+from logging_info.logging_config import setup_logging
 import logging
 import time
 
@@ -31,5 +31,5 @@ class InstagramBot:
 
         # Press Enter key
         password_input.send_keys(Keys.RETURN)
-        time.sleep(3)
+        time.sleep(5)
         logging.info("Logged in to Instagram!")

@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from information.logging_config import setup_logging
+from logging_info.logging_config import setup_logging
 import logging
 
 # Initialize
@@ -13,7 +13,7 @@ class InstagramBlocking:
 
     def block_user(self, username_to_block):
         driver = self.browser.get_driver()
-        wait = WebDriverWait(driver, 20)
+        wait = WebDriverWait(driver, 60)
 
         try:
             logging.info("Searching for Options button...")

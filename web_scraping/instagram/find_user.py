@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from information.logging_config import setup_logging
+from logging_info.logging_config import setup_logging
 import logging
 
 # Initialize
@@ -17,7 +17,7 @@ class FindUser:
         driver.get(f"https://www.instagram.com/{username}/")
 
         # Wait for the page to fully load
-        wait = WebDriverWait(driver, 5)
+        wait = WebDriverWait(driver, 20)
         logging.info("Waiting for the page to fully load...")
 
         # Wait for the dynamic profile element

@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from information.logging_config import setup_logging
+from logging_info.logging_config import setup_logging
 import logging
 
 # Initialize
