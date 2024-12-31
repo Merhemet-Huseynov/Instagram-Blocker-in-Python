@@ -1,6 +1,11 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from information.logging_config import setup_logging
+import logging
 import time
+
+# Initialize
+setup_logging()
 
 class InstagramBot:
     def __init__(self, browser):
@@ -9,7 +14,7 @@ class InstagramBot:
     def open_instagram(self):
         driver = self.browser.get_driver()
         driver.get("https://www.instagram.com")
-        print("Instagram opened!")
+        logging.info("Instagram opened!")
         time.sleep(3)
 
     def login(self, username, password):
@@ -26,5 +31,5 @@ class InstagramBot:
 
         # Press Enter key
         password_input.send_keys(Keys.RETURN)
-        time.sleep(5)
-        print("Logged in to Instagram!")
+        time.sleep(3)
+        logging.info("Logged in to Instagram!")

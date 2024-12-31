@@ -1,7 +1,7 @@
+from instagram.instagram_blocking_process import InstagramBlocking
 from browser_bot.opening_browser import BrowserBot
 from instagram.instagram_login import InstagramBot
 from instagram.find_user import FindUser
-
 
 # Gather information
 user_username = input("Enter your Instagram username: ")
@@ -12,6 +12,7 @@ username_to_find = input("Enter the username to find: ")
 browser = BrowserBot()
 instagram = InstagramBot(browser)
 find_user = FindUser(browser)
+blocking = InstagramBlocking(browser)
 
 
 if __name__ == "__main__":
@@ -19,5 +20,5 @@ if __name__ == "__main__":
     instagram.open_instagram()
     instagram.login(user_username, user_password)
     find_user.instagram_find_user(username_to_find)
+    blocking.block_user(username_to_find)
     
-    input("Press Enter to exit...")
